@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    },
+    {
+      "id": 2,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    },
+    {
+      "id": 3,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    },
+    {
+      "id": 4,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    },
+    {
+      "id": 5,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    },
+    {
+      "id": 6,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    },
+    {
+      "id": 7,
+      "name": "Real Estate",
+      "description": " This is a real estate project",
+      "image": "/images/realestate.jpg",
+      "status": "active",
+      "url": "https://realestate-next-chi.vercel.app/",
+      "created_at": "2022-01-01T00:00:00.000",
+      "updated_at": "2022-01-01T00:00:00.000",
+      "use": ["Next.js", "TailwindCss", "NextAuth"]
+    }
+  ]
+}
