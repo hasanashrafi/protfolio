@@ -1,50 +1,48 @@
-import Image from "next/image";
+import { MarqueeDemo } from "@/components/MarqueeCompo";
 import { Inter } from "next/font/google";
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/hasanashrafi/repos`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => setProjects(data))
-      .catch(error => console.error('Failed to fetch projects:', error));
+    const profileCard = document.getElementById('profile_card');
+    profileCard.classList.add('animate');
   }, []);
 
-  // Filter projects to only include those with a non-null homepage
-  const filteredProjects = projects.filter(project => project.homepage !== null);
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={` text-gradient-dark bg-background flex min-h-screen flex-col items-center justify-around p-4 ${inter.className}`}
     >
-      <div className="flex flex-wrap justify-center z-10 max-w-5xl w-full items-center font-mono text-sm lg:flex">
-        {filteredProjects.length > 0 ? (
-          filteredProjects.map((project) => (
-            <div key={project.node_id} className="bg-white w-60 h-40 border rounded m-1">
-              <img src={project.owner.avatar_url} className="rounded-full size-12 m-2 mx-auto" />
-              <p className="p-4 w-full">{project.name}</p>
-              <div className="flex justify-center p-1 w-full">
-                <Link href={`${project.homepage}`}
-                  className="w-full text-center text-white bg-blue-600 p-1 rounded">
-                  {project.name} Demo
-                </Link>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p>No projects with a homepage available.</p>
-        )}
+      <div className="p-3 h-96   w-full items-center flex flex-col  justify-center" id="head_detail">
+        <h1 className="text-center text-blue-800 m-1 text-7xl font-bold text-secondary">Hasan Ashrafi</h1>
+        <p className="text-base text-blue-700  text-center">Welcome to my portfolio!</p>
       </div>
+
+      <div className="flex flex-col justify-center">
+        <div id="profile_card" className="flex flex-col p-2 md:flex-row items-center gap-2 shadow-sm bg-[#f0f3ff] border  w-full lg:w-1/2 mx-auto rounded-md ">
+          <Image src="/images/profile.jpg" width={200} height={200} className="shadow-md hover:scale-110 transition-all ease-in-out rounded-xl" />
+          <p className="text-gradient text-justify">
+            Hi,
+            <br />
+            I am a software developer with a passion for building scalable and efficient solutions.
+            I have experience with a range of technologies, including JavaScript, Python, and SQL.
+            I am excited to share my projects and experiences with you.
+            my goal is to create a portfolio that showcases my skills and experience.
+          </p>
+        </div>
+        <Link href="/projects" className=" w-fit text-center self-center  border rounded-2xl p-2 mt-4 mx-auto text-white hover:bg-white/50 ease-in-out transition-all ">
+          View My Projects
+        </Link>
+      </div>
+
+
+      <MarqueeDemo />
+
     </main>
   );
 }
